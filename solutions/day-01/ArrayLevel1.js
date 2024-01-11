@@ -33,7 +33,8 @@ console.log(fiveAr.length);
 // Get the first item, the middle item and the last item of the array
 console.log(fiveAr[0]);
 console.log(fiveAr[2]);
-console.log(fiveAr[length - 1]);
+console.log(fiveAr[4]);
+
 // Declare an array called mixedDataTypes, put different data types in the array and find the length of the array. The array size should be greater than 5
 const mixedDataTypes = ["bagus", 21, true, "Solo", "yuni", 22, false, "Jkt"];
 console.log(mixedDataTypes.length);
@@ -55,7 +56,7 @@ console.log(itCompanies.length);
 // Print the first company, middle and last company
 console.log(itCompanies[0]);
 console.log(itCompanies[3]);
-console.log(itCompanies[length - 1]);
+console.log(itCompanies[itCompanies.length - 1]);
 // Print out each company
 for (let i = 0; i < itCompanies.length; i++) {
   console.log(itCompanies[i]);
@@ -88,7 +89,7 @@ for (let i = 0; i < itCompanies.length; i++) {
     techsWithMoreThanOneO.push(tech);
   }
 }
-
+console.log(techsWithMoreThanOneO);
 // Sort the array using sort() method
 itCompanies.sort();
 console.log(itCompanies);
@@ -100,6 +101,8 @@ console.log(itCompanies.slice(0, 3));
 // Slice out the last 3 companies from the array
 console.log(itCompanies.slice(-3));
 // Slice out the middle IT company or companies from the array
+console.log(itCompanies.splice(4, 2));
+
 // Calculate the starting index for the middle elements
 const startIndex = Math.floor(itCompanies.length / 2) - 1; // Adjust -1 for odd-length arrays
 
@@ -113,10 +116,8 @@ console.log(middleElements);
 // Remove the first IT company from the array
 console.log(itCompanies.shift());
 // Remove the middle IT company or companies from the array
-const removedMiddleElements = itCompanies.splice(
-  startIndex,
-  numElementsToRemove
-);
+const removedMiddleElements = itCompanies.splice(startIndex, middleElements);
+
 console.log(removedMiddleElements); // The removed middle element(s)
 // Remove the last IT company from the array
 console.log(itCompanies.pop());
